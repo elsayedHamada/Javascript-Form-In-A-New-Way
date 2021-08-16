@@ -1,0 +1,184 @@
+/* Link Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+/* Basic Styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+}
+img{
+    width: 100%;
+}
+::selection{
+    background-color: #FFA200;
+    color: white;
+}
+/* Background */
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("assets/Bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+/* Header */
+.container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.header{
+    text-align: center;
+    margin-top: 10rem;
+}
+.logo{
+    width: 30rem;
+    transition:transform .3s;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.welcome{
+    font-size: 3rem;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+/* Form */
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.name, .email, .message, .thanks{
+    position: absolute;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: .6rem;
+    margin: 1.5rem;
+    width: 30rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: .5s ease;
+}
+.name i, .email i, .message i{
+    font-size: 2rem;
+    color: #FFA200;
+}
+.name input, .email input, .message input{
+    height: 100%;
+    width: 100%;
+    margin-left: 1rem;
+    border: none;
+    font-family: "poppins", sans-serif;
+    outline: none;
+    color: #FFA200;
+}
+::placeholder{
+    color: #FFA200;
+    opacity: .5;
+}
+div.inactive{
+    opacity: 0;
+    transform: translateY(-1rem);
+    pointer-events: none;
+    transition: all .5 ease;
+}
+div.active{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+    transition: all .5 ease;
+}
+.submit-btn{
+    margin-top: 12rem;
+    border: none;
+    outline: none;
+    width: 8rem;
+    height: 4rem;
+    background-color: white;
+    color: #FFA200;
+    font-size: 2rem;
+    border-radius: .5rem;
+    transition: all .3;
+    cursor: pointer;
+}
+.submit-btn:hover{
+    background-color: #FFA200;
+    color: white;
+}
+.thanks{
+    width: 30rem;
+    color: #FFA200;
+    font-size: 1.5rem;
+    justify-content: space-between;
+}
+/* Footer */
+footer{
+    width: 100%;
+    height: 97%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+/* Responsive */
+@media screen and (min-width: 700px){
+    .logo{
+        width: 40rem;
+    }
+    .name, .email, .message, .thanks{
+        width: 35rem;
+    }
+    .container{
+        top: -4rem;
+    }
+}
+@media screen and (min-width: 700px){
+    .logo{
+        width: 40rem;
+    }
+    .name, .email, .message, .thanks{
+        width: 35rem;
+    }
+}
+@media screen and (min-width: 1000px){
+    .logo{
+        width: 50rem;
+    }
+    .name, .email, .message, .thanks{
+        width: 40rem;
+        height: 7rem;
+        border-radius: 1rem;
+    }
+    .name input, .email input, .message input{
+        font-size: 2rem;
+    }
+    .name i, .email i, .message i{
+        font-size: 3rem;
+    }
+    .submit-btn{
+        margin-top: 16rem;
+        width: 10rem;
+        height: 6rem;
+        border-radius: 1rem;
+        font-size: 3rem;
+    }
+    footer{
+        font-size: 1.3rem;
+    }
+}
