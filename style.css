@@ -27,6 +27,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    transition: background .5 ease;
 }
 body.error-color{
     background: rgb(255, 60, 0);
@@ -137,13 +138,21 @@ footer{
     letter-spacing: 1px;
 }
 /* Error */
-.error{
-    color: red;
-    font-size: 3rem;
+.warning-message{
+    color: white;
+    font-size: 1.4rem;
 }
-.wrong.active{
-    opacity: 1;
-
+/* Animation */
+@keyframes shaking {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
 /* Responsive */
 @media screen and (min-width: 700px){
@@ -192,3 +201,4 @@ footer{
         font-size: 1.3rem;
     }
 }
+
